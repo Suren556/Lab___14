@@ -30,7 +30,7 @@ void readData(char* path, char* data) {
 	infile.close();
 }
 bool isLetter(char* c) {
-	char unChar[] = "`~!@#$%^&*()_-+={}[];:'\",<.>/?\\|น ";
+	char unChar[] = "`~!@#$%^&*()_-+={}[];:'\",<.>/?\\|ยน ";
 	for (int i = 0; i < sizeof(unChar) / sizeof(unChar[0]); i++)
 	{
 		if (*c == unChar[i])
@@ -58,8 +58,8 @@ char* Result(char* path, char* data) {
 }
 
 int main() {
-	char* path = new char[9]{ "data.txt" };
-	char* data = new char[256]{ "asd, &gsj & Gsdg&&hjsd(" };
+	char* path = "data.txt";
+	char* data = "asd, &gsj & Gsdg&&hjsd(";
 	data = Result(path, data);
 
 	cout<< data<< endl;
